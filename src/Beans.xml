@@ -26,4 +26,31 @@
     </bean>
 
     <bean class="com.tutorialspoint.Spring_BeanPostProcessor_InitHelloWorld"/>
+
+    <bean id="SpringBean_Inheritance_HelloWorld" class="com.tutorialspoint.SpringBean_Inheritance_HelloWorld">
+        <property name="message1" value="Hello World!">
+        </property>
+        <property name="message2" value="Hello Second World!"/>
+    </bean>
+
+    <bean id="SpringBean_Inheritance_HelloIndia" class="com.tutorialspoint.SpringBean_Inheritance_HelloIndia"
+    parent="SpringBean_Inheritance_HelloWorld">
+        <property name="message1" value="Hello India!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+
+    <!--
+    <bean id="SpringBean_Inheritance_HelloWorld" abstract="true">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hello Second World!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+
+    <bean id="SpringBean_Inheritance_HelloIndia" class="com.tutorialspoint.SpringBean_Inheritance_HelloIndia"
+          parent="SpringBean_Inheritance_HelloWorld">
+        <property name="message1" value="Hello India!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+    -->
+
 </beans>
