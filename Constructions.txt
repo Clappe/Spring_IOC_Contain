@@ -210,3 +210,34 @@ Spring IOC 容器
         建议你不要使用 InitializingBean 或者 DisposableBean 的回调方法，因为 XML 配置在命名方法上提供了极大的灵活性。
 
     5.3 创建SpringBean_LifeCycle_HelloWorld.java 和 SpringBean_LifeCycle_Main.java编写相应代码并配置好xml文件运行即可。
+
+6、Spring Bean 后置处理器
+
+    6.1 Bean 后置处理器允许在调用初始化方法前后对 Bean 进行额外的处理。
+
+    6.2 配置了bean后置处理器后，处理器会在所有bean初始化前后调用postProcessBeforeInitialization和
+        postProcessAfterInitializaion方法。
+
+    6.3 创建Spring_BeanPostProcessor_HelloWorld.java和Spring_BeanPostProcessor_InitHelloWorld.java以及
+        Spring_BeanPostProcessor_Main.java，编写实现代码，配置好xml文件后运行即可。
+
+    6.4 结果
+
+       对所有的bean初始化前后都调用了BeanPostProcessor接口的postProcessorBeforeInitialization方法和
+       postProcessorAfterInitialization方法。
+
+            BeforeInitialization: helloWorld
+            AfterInitialization: helloWorld
+            BeforeInitialization: fileSystemXmlApplicationContext_HelloWorld
+            AfterInitialization: fileSystemXmlApplicationContext_HelloWorld
+            BeforeInitialization: Spring_Scope_HelloWorld
+            AfterInitialization: Spring_Scope_HelloWorld
+            BeforeInitialization: SpringBean_LifeCycle_HelloWorld
+            Bean is going through init.
+            AfterInitialization: SpringBean_LifeCycle_HelloWorld
+            BeforeInitialization: Spring_BeanPostProcessor_HelloWorld
+            Bean is going through init.
+            AfterInitialization: Spring_BeanPostProcessor_HelloWorld
+            Your Message: Hello World!
+            Bean will be destroied.
+            Bean will be destroied now.

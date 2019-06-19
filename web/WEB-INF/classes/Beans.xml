@@ -19,4 +19,11 @@
           init-method="init" destroy-method="destroy">
         <property name="message" value="Hello World!"></property>
     </bean>
+
+    <bean id="Spring_BeanPostProcessor_HelloWorld" class="com.tutorialspoint.Spring_BeanPostProcessor_HelloWorld"
+          init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
+    <bean class="com.tutorialspoint.Spring_BeanPostProcessor_InitHelloWorld"/>
 </beans>
