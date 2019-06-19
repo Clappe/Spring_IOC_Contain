@@ -10,4 +10,13 @@
     <bean id="fileSystemXmlApplicationContext_HelloWorld" class="com.tutorialspoint.FileSystemXmlApplicationContext_HelloWorld">
         <property name="message" value="Hello World!"></property>
     </bean>
+
+    <bean id="Spring_Scope_HelloWorld" class="com.tutorialspoint.Spring_Scope_HelloWorld"
+    scope="singleton">
+    </bean>
+
+    <bean id="SpringBean_LifeCycle_HelloWorld" class="com.tutorialspoint.SpringBean_LifeCycle_HelloWorld"
+          init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello World!"></property>
+    </bean>
 </beans>
